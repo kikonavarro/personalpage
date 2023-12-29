@@ -1,0 +1,26 @@
+---
+const experience = [
+    {
+        name: 'Territory Business Manager',
+        company: 'John Deere'
+    },
+
+    {
+        name: 'Area Sales Manager',
+        company: 'John Deere Financial'
+    }
+]
+
+
+---
+
+<ul>
+    {experience.map((e => {
+        
+           return(
+            <p>{e.name}</p>
+            <p>{e.company}</p>
+            )
+        
+    }))}
+</ul>
