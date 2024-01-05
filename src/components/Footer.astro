@@ -1,5 +1,19 @@
 ---
+import Contact from "./Contact.astro";
+import Linkedin from "./icons/Linkedin.astro";
 
+const today = new Date().getFullYear()
 ---
+<div class="container2">
+    <p> &copy; {today} Created with ❤️ by Francisco Javier Navarro Contact me in my RRSS</p>
+    <a href="https://www.linkedin.com/in/franciscojaviernavarrodemingo/"> <Contact/> </a>
 
-<p>Created with ❤️❤️ by Francisco Javier Navarro </p>
+</div>
+
+<style>
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>

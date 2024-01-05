@@ -1,5 +1,70 @@
 ---
-
+import type { iProject } from "../types/project";
+const projects: iProject[] = [
+	{
+		image: "../../images/Proyecto Pacientes Veterinaria.png",
+		url: "",
+		name: "dibujo de Nata Noel",
+	},
+	{
+		image: "../../images/Proyecto Pacientes Veterinaria.png",
+		url: "",
+		name: "dibujo de Nata Noel",
+	},
+	{
+		image: "../../images/Proyecto Pacientes Veterinaria.png",
+		url: "",
+		name: "dibujo de Nata Noel",
+	},
+	{
+		image: "../../images/Proyecto Pacientes Veterinaria.png",
+		url: "",
+		name: "dibujo de Nata Noel",
+	},
+	{
+		image: "../../images/Proyecto Pacientes Veterinaria.png",
+		url: "",
+		name: "dibujo de Nata Noel",
+	},
+];
 ---
 
-<p>lista de trabajos</p>
+<h2 class="p-4 text-center text-3xl">Proyectos realizados</h2>
+
+<ol class="cards p-4">
+	{
+		projects.map((project) => {
+			return (
+				<div>
+					<img src={project.image} alt="" />
+					<p class="text-xl">{project.url}</p>
+					<h3 class="text-xl">{project.name}</h3>
+				</div>
+			);
+		})
+	}
+</ol>
+
+<style>
+	.cards {
+		display: grid;
+		grid-gap: 20px;
+		padding: 20px;
+		margin: auto;
+		grid-template-columns: repeat(1, 1fr); /* Por defecto, 1 columna */
+	}
+
+	/* Para pantallas medianas */
+	@media screen and (min-width: 600px) {
+		.cards {
+			grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+		}
+	}
+
+	/* Para pantallas grandes */
+	@media screen and (min-width: 900px) {
+		.cards {
+			grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+		}
+	}
+</style>
