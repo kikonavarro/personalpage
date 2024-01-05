@@ -1,6 +1,11 @@
 ---
+import "@fontsource-variable/onest"
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const {title} = Astro.props
+
 ---
 
 <!doctype html>
@@ -13,7 +18,7 @@ import Footer from "../components/Footer.astro";
         <link rel="stylesheet" href="../styles/">
 		<meta name="generator" content={Astro.generator} />
         
-		<title>Kiko's Porfolio</title>
+		<title>{title}</title>
 	</head>
 	<body class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
 		<Header/>
@@ -26,7 +31,12 @@ import Footer from "../components/Footer.astro";
 	:root {
 		color-scheme: light dark;
 
-  }
+  	}
+
+  	html {
+		font-family: 'Onest Variable', sans-serif;
+
+	}
 
 	body {
 		color: rgba(17, 17, 17, 0.9);;
@@ -42,10 +52,6 @@ import Footer from "../components/Footer.astro";
       		color: rgba(255, 255, 255, 0.9);
     	}
 	}
-
-    a {
-        margin: 5px
-    }
 
 </style>
     
